@@ -3,4 +3,5 @@
     <string name="please_enter_password">Please Enter Password</string>
     <string name="login">Login</string>
     <string name="password">Password:</string>
+    <string name="congrats_on_passing_the_login_screen">Congrats on passing the login screen!</string>
 </resources>
