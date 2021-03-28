@@ -1,6 +1,5 @@
-package com.example.hw11;
+package com.example.hw1;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
