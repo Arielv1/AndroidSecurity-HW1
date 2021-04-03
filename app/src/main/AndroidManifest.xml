@@ -23,7 +23,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HW11">
+        android:theme="@style/Theme.HW1">
         <activity android:name="com.example.hw1.Activity_Passed_Login"/>
         <activity android:name="com.example.hw1.MainActivity">
             <intent-filter>
