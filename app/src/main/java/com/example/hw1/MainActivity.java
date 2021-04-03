@@ -96,12 +96,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkLogin() {
 
-    checkFlashlight();
-        if (checkBluetooth() && checkWifi() && checkDoNotDisturb()  && checkAirplane()
+
+        if (checkFlashlight() && checkBluetooth() && checkWifi() && checkDoNotDisturb()  && checkAirplane()
                 && checkStorage() && checkChargingState() && checkBatteryValue() && checkNumOfContacts())
         {
             Log.d("pttt", "Can Login");
-            Toaster.getInstance().showToast("Perform Login");
             Intent intent = new Intent(getApplicationContext(), Activity_Passed_Login.class);
             startActivity(intent);
         }
@@ -202,6 +201,8 @@ public class MainActivity extends AppCompatActivity {
     }
     private boolean checkFlashlight() {
         Log.d("pttt", "checkFlashlight: " + (flashState && getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)));
+        if (!(flashState && getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)))
+            Toaster.getInstance().showToast("Turn On Flashlight");
         return flashState && getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
     }
 
