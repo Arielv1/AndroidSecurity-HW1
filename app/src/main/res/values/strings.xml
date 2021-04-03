@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HW11</string>
+    <string name="app_name">HW1</string>
     <string name="please_enter_password">Please Enter Password</string>
     <string name="login">Login</string>
     <string name="password">Password:</string>
