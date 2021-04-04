@@ -97,8 +97,8 @@ public class MainActivity extends AppCompatActivity {
     private void checkLogin() {
 
 
-        if (checkFlashlight() && checkBluetooth() && checkWifi() && checkDoNotDisturb()  && checkAirplane()
-                && checkStorage() && checkChargingState() && checkBatteryValue() && checkNumOfContacts())
+        if (checkFlashlight() && checkNumOfContacts() && checkBluetooth() && checkWifi() && checkDoNotDisturb()  && checkAirplane()
+                && checkStorage() && checkChargingState() && checkBatteryValue())
         {
             Log.d("pttt", "Can Login");
             Intent intent = new Intent(getApplicationContext(), Activity_Passed_Login.class);
@@ -241,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
         Cursor cur = cr.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
 
         if ((cur != null ? cur.getCount() : 0) > 0) {
-            while (cur != null && cur.moveToNext()) {
+            while (cur != null && cur.moveToNext() && numContacts <= MIN_CONTACT_NUM) {
                 String id = cur.getString(cur.getColumnIndex(ContactsContract.Contacts._ID));
                 String name = cur.getString(cur.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 
